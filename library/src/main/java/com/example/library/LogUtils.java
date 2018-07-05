@@ -5,13 +5,20 @@ import android.util.Log;
 
 public class LogUtils {
     private static final String TAG = "LogUtils";
+
     public static void info(String s){
         info(TAG, s);
     }
 
-
     public static void info(String tag, String s){
-        if(TextUtils.isEmpty(tag) || TextUtils.isEmpty(s)) return;
+        if(TextUtils.isEmpty(tag) || TextUtils.isEmpty(s))
+            return;
         Log.i(tag, s);
+    }
+
+    public static void error(String tag, String error){
+        if(TextUtils.isEmpty(tag) || TextUtils.isEmpty(error))
+            return;
+        Log.e(tag, error);
     }
 }
